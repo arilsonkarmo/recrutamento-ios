@@ -21,6 +21,7 @@
 		FCE1CC831C55B762002AAC25 /* TraktManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC801C55B762002AAC25 /* TraktManager.swift */; };
 		FCE1CC871C55C9EB002AAC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE1CC861C55C9EB002AAC25 /* Assets.xcassets */; };
 		FCFD26371C564C4B00E2A6F0 /* movilelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD26361C564C4B00E2A6F0 /* movilelogo.png */; };
+		FCFD26391C5650F300E2A6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD26381C5650F300E2A6F0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FCE1CC801C55B762002AAC25 /* TraktManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraktManager.swift; path = TraktClasses/TraktManager.swift; sourceTree = "<group>"; };
 		FCE1CC861C55C9EB002AAC25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFD26361C564C4B00E2A6F0 /* movilelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = movilelogo.png; path = Images/movilelogo.png; sourceTree = "<group>"; };
+		FCFD26381C5650F300E2A6F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		FCE46C871C552E1000D81CA1 /* TraktClasses */ = {
 			isa = PBXGroup;
 			children = (
+				FCFD263A1C5652E600E2A6F0 /* Constants */,
 				FCE1CC7E1C55B762002AAC25 /* TraktImageSize.swift */,
 				FCE1CC7F1C55B762002AAC25 /* TraktImageType.swift */,
 				FCE1CC801C55B762002AAC25 /* TraktManager.swift */,
@@ -160,6 +163,14 @@
 				FCE1CC741C55B6EC002AAC25 /* GenericAlert.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		FCFD263A1C5652E600E2A6F0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD26381C5650F300E2A6F0 /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				FCE1CC831C55B762002AAC25 /* TraktManager.swift in Sources */,
 				FCE1CC781C55B70B002AAC25 /* HomeController.swift in Sources */,
 				FCE1CC7D1C55B743002AAC25 /* ShowModel.swift in Sources */,
+				FCFD26391C5650F300E2A6F0 /* Constants.swift in Sources */,
 				FCE1CC791C55B70B002AAC25 /* OverviewController.swift in Sources */,
 				FCE1CC811C55B762002AAC25 /* TraktImageSize.swift in Sources */,
 				FC863E9D1C4F0E4000B95C79 /* AppDelegate.swift in Sources */,

@@ -17,11 +17,11 @@ class APIConnector {
 
     init() {
         defaultHeaders = [
-            "trakt-api-key": "3ec8c95cbc574fa055295d95ccf225570988f810212c4e65fd98f5134eeaee19",
+            "trakt-api-key": Constants.TraktCredentials.ClientId,
             "Content-Type": "application/json",
             "trakt-api-version": "2"
         ]
-        endpoint = "https://api-v2launch.trakt.tv/"
+        endpoint = Constants.TraktAPI.BaseUrl
         limit = 30
     }
     
