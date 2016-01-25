@@ -13,7 +13,7 @@ private let downloadQueue = dispatch_queue_create("com.arilsoncarmo.movile-test"
 class HomeController: UICollectionViewController {
     
     let reuseIdentifier = "movieCell"
-    let sectionInsets = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 20.0, right: 0.0)
+    let sectionInsets = UIEdgeInsets(top: 20.0, left: 15.0, bottom: 15.0, right: 10.0)
     var trakt = TraktManager()
     var shows: [ShowsModel]!
     var posterCache = NSCache()
