@@ -53,7 +53,7 @@ class recrutamento_iosTests: XCTestCase {
         let showsModel = ShowsModel()
         let url = NSURL(string: "http://densta-panels.com/wp-content/uploads/2014/02/test1.jpg")
         showsModel.asyncLoadImageContent(url!) { (image) -> Void in
-            if let _ = self.vc.posterCache.objectForKey(url!) as? UIImage {
+            if let _ = showsModel.getPosterCache(url) as UIImage! {
                 XCTAssertTrue(true, "image saved in cache")
             } else {
                 XCTFail("Cannot be save image in cache")
