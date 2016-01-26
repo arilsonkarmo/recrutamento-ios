@@ -16,14 +16,16 @@ class GenericLoader {
     *  Show load spinner on center of the view.
     */
     func showSpinner(view: UIView) {
-        loadingFrame = UIView(frame: CGRect(x: view.frame.midX - 40, y: view.frame.midY - 40 , width: 80, height: 80))
-        loadingFrame.layer.cornerRadius = 15
-        loadingFrame.backgroundColor = UIColor(white: 0, alpha: 0.8)
-        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-        activityIndicator.startAnimating()
-        loadingFrame.addSubview(activityIndicator)
-        view.addSubview(loadingFrame)
+        if !loadingFrame.isDescendantOfView(view) {
+            loadingFrame = UIView(frame: CGRect(x: view.frame.midX - 40, y: view.frame.midY - 40 , width: 80, height: 80))
+            loadingFrame.layer.cornerRadius = 15
+            loadingFrame.backgroundColor = UIColor(white: 0, alpha: 0.8)
+            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+            activityIndicator.startAnimating()
+            loadingFrame.addSubview(activityIndicator)
+            view.addSubview(loadingFrame)
+        }
     }
     
     /*
