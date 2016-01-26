@@ -62,8 +62,8 @@ class ShowsModel : NSObject {
         return nil
     }
     
-    func getPosterCache(urlKey: NSURL) -> UIImage? {
-        if let img = posterCache.objectForKey(urlKey) as? UIImage {
+    func getPosterCache(urlKey: NSURL?) -> UIImage? {
+        if let img = posterCache.objectForKey(urlKey!) as? UIImage {
             return img
         }
         return nil
