@@ -17,10 +17,6 @@ public class HomeController: UICollectionViewController {
     let loadingView = DGElasticPullToRefreshLoadingViewCircle()
     let loader = GenericLoader()
     var shows: [ShowsModel]!
-    var posterCache = NSCache()
-    var loadingFrame = UIView()
-    var activityIndicator = UIActivityIndicatorView()
-    
     
     override public func viewDidLoad() {
         loader.showSpinner(view)
@@ -30,8 +26,8 @@ public class HomeController: UICollectionViewController {
     
     /*
     *  Load trending shows from Trakt API
-    *  parameter: An boolean to increment page or not and dependency
-    *  injecting to be turn an testable method.
+    *  parameter: Boolean to increment page or not and dependency
+    *  injecting to be turn this method an testable method.
     */
     func loadShows(increment: Bool, trakt: TraktManager = TraktManager()) {
         trakt.getTrendingShows(increment) { (result, error) -> Void in
@@ -78,12 +74,12 @@ public class HomeController: UICollectionViewController {
         let poster = cell.viewWithTag(2) as? UIImageView
         
         title?.text = self.shows[indexPath.row].title
-        poster?.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        poster?.image = UIImage(named: "movile-loading.png")
         
         if let url = self.shows[indexPath.row].imageURL(TraktImageType.Poster , size: TraktImageSize.Thumb) {
-            let img = ShowsModel().getPosterCache(url)
-            poster?.image = img
-            if img == nil {
+            if let img = ShowsModel().getPosterCache(url) {
+                poster?.image = img
+            } else {
                 ShowsModel().asyncLoadImageContent(url, completion: { (image) -> Void in
                     let ip =  collectionView.indexPathForCell(cell)
                     if indexPath.isEqual(ip) {
