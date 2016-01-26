@@ -32,6 +32,8 @@ class recrutamento_iosTests: XCTestCase {
         vc = navigationController.topViewController as! HomeController
         
         UIApplication.sharedApplication().keyWindow!.rootViewController = vc
+        
+        
     }
     
     func testShowPopulating() {

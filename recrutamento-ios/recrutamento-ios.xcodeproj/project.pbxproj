@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8F313CBB48FE68181AC56268 /* Pods_recrutamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4A64FFE591FFD0BDB84C3D /* Pods_recrutamento_ios.framework */; };
+		FC3609CA1C5706BC002F946F /* TraktImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7E1C55B762002AAC25 /* TraktImageSize.swift */; };
+		FC3609CB1C5706BF002F946F /* TraktImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7F1C55B762002AAC25 /* TraktImageType.swift */; };
+		FC3609CE1C5706DF002F946F /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7C1C55B743002AAC25 /* ShowModel.swift */; };
+		FC3609D01C570D61002F946F /* movile-loading.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3609CF1C570D61002F946F /* movile-loading.png */; };
 		FC863E9D1C4F0E4000B95C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC863E9C1C4F0E4000B95C79 /* AppDelegate.swift */; };
 		FC863EA21C4F0E4100B95C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC863EA01C4F0E4100B95C79 /* Main.storyboard */; };
 		FC863EA71C4F0E4100B95C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC863EA51C4F0E4100B95C79 /* LaunchScreen.storyboard */; };
@@ -35,10 +39,18 @@
 		FCFD265E1C56CF4900E2A6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC863EA01C4F0E4100B95C79 /* Main.storyboard */; };
 		FCFD26601C56F31400E2A6F0 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */; };
 		FCFD26611C56F5D600E2A6F0 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */; };
+		FCFD26691C57032E00E2A6F0 /* recrutamento_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD26681C57032E00E2A6F0 /* recrutamento_iosUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FCFD26441C5692BD00E2A6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC863E911C4F0E4000B95C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC863E981C4F0E4000B95C79;
+			remoteInfo = "recrutamento-ios";
+		};
+		FCFD266B1C57032E00E2A6F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC863E911C4F0E4000B95C79 /* Project object */;
 			proxyType = 1;
@@ -52,6 +64,7 @@
 		9068888D34E475F7C6F4AA41 /* Pods-recrutamento-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recrutamento-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recrutamento-ios/Pods-recrutamento-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9E4A64FFE591FFD0BDB84C3D /* Pods_recrutamento_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_recrutamento_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ABD6EB88312F14119D5604 /* Pods_movile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3609CF1C570D61002F946F /* movile-loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movile-loading.png"; sourceTree = "<group>"; };
 		FC863E991C4F0E4000B95C79 /* recrutamento-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recrutamento-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC863E9C1C4F0E4000B95C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC863EA11C4F0E4100B95C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +85,9 @@
 		FCFD26411C5692BD00E2A6F0 /* recrutamento_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recrutamento_iosTests.swift; sourceTree = "<group>"; };
 		FCFD26431C5692BD00E2A6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericLoader.swift; sourceTree = "<group>"; };
+		FCFD26661C57032D00E2A6F0 /* recrutamento-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "recrutamento-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFD26681C57032E00E2A6F0 /* recrutamento_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recrutamento_iosUITests.swift; sourceTree = "<group>"; };
+		FCFD266A1C57032E00E2A6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +100,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FCFD263C1C5692BC00E2A6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFD26631C57032D00E2A6F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,6 +139,7 @@
 			children = (
 				FC863E9B1C4F0E4000B95C79 /* recrutamento-ios */,
 				FCFD26401C5692BD00E2A6F0 /* recrutamento-iosTests */,
+				FCFD26671C57032E00E2A6F0 /* recrutamento-iosUITests */,
 				FC863E9A1C4F0E4000B95C79 /* Products */,
 				03A958AF5354EA6A6263A337 /* Pods */,
 				B1C0ACD35F44B337E22C5EEF /* Frameworks */,
@@ -127,6 +151,7 @@
 			children = (
 				FC863E991C4F0E4000B95C79 /* recrutamento-ios.app */,
 				FCFD263F1C5692BC00E2A6F0 /* recrutamento-iosTests.xctest */,
+				FCFD26661C57032D00E2A6F0 /* recrutamento-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFD26361C564C4B00E2A6F0 /* movilelogo.png */,
+				FC3609CF1C570D61002F946F /* movile-loading.png */,
 				FC863EA51C4F0E4100B95C79 /* LaunchScreen.storyboard */,
 				FC863E9C1C4F0E4000B95C79 /* AppDelegate.swift */,
 			);
@@ -219,6 +245,15 @@
 			path = "recrutamento-iosTests";
 			sourceTree = "<group>";
 		};
+		FCFD26671C57032E00E2A6F0 /* recrutamento-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD26681C57032E00E2A6F0 /* recrutamento_iosUITests.swift */,
+				FCFD266A1C57032E00E2A6F0 /* Info.plist */,
+			);
+			path = "recrutamento-iosUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +295,24 @@
 			productReference = FCFD263F1C5692BC00E2A6F0 /* recrutamento-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FCFD26651C57032D00E2A6F0 /* recrutamento-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCFD266D1C57032E00E2A6F0 /* Build configuration list for PBXNativeTarget "recrutamento-iosUITests" */;
+			buildPhases = (
+				FCFD26621C57032D00E2A6F0 /* Sources */,
+				FCFD26631C57032D00E2A6F0 /* Frameworks */,
+				FCFD26641C57032D00E2A6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCFD266C1C57032E00E2A6F0 /* PBXTargetDependency */,
+			);
+			name = "recrutamento-iosUITests";
+			productName = "recrutamento-iosUITests";
+			productReference = FCFD26661C57032D00E2A6F0 /* recrutamento-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,6 +327,10 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					FCFD263E1C5692BC00E2A6F0 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FC863E981C4F0E4000B95C79;
+					};
+					FCFD26651C57032D00E2A6F0 = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = FC863E981C4F0E4000B95C79;
 					};
@@ -294,6 +351,7 @@
 			targets = (
 				FC863E981C4F0E4000B95C79 /* recrutamento-ios */,
 				FCFD263E1C5692BC00E2A6F0 /* recrutamento-iosTests */,
+				FCFD26651C57032D00E2A6F0 /* recrutamento-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +365,7 @@
 				FCE1CC871C55C9EB002AAC25 /* Assets.xcassets in Resources */,
 				FCFD26371C564C4B00E2A6F0 /* movilelogo.png in Resources */,
 				FC863EA21C4F0E4100B95C79 /* Main.storyboard in Resources */,
+				FC3609D01C570D61002F946F /* movile-loading.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFD265E1C56CF4900E2A6F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFD26641C57032D00E2A6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +471,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCFD26621C57032D00E2A6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3609CE1C5706DF002F946F /* ShowModel.swift in Sources */,
+				FCFD26691C57032E00E2A6F0 /* recrutamento_iosUITests.swift in Sources */,
+				FC3609CB1C5706BF002F946F /* TraktImageType.swift in Sources */,
+				FC3609CA1C5706BC002F946F /* TraktImageSize.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -412,6 +489,11 @@
 			isa = PBXTargetDependency;
 			target = FC863E981C4F0E4000B95C79 /* recrutamento-ios */;
 			targetProxy = FCFD26441C5692BD00E2A6F0 /* PBXContainerItemProxy */;
+		};
+		FCFD266C1C57032E00E2A6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC863E981C4F0E4000B95C79 /* recrutamento-ios */;
+			targetProxy = FCFD266B1C57032E00E2A6F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -568,6 +650,30 @@
 			};
 			name = Release;
 		};
+		FCFD266E1C57032E00E2A6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "recrutamento-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arilsoncarmo.recrutamento-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "recrutamento-ios";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FCFD266F1C57032E00E2A6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "recrutamento-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arilsoncarmo.recrutamento-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "recrutamento-ios";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +700,15 @@
 			buildConfigurations = (
 				FCFD26471C5692BD00E2A6F0 /* Debug */,
 				FCFD26481C5692BD00E2A6F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCFD266D1C57032E00E2A6F0 /* Build configuration list for PBXNativeTarget "recrutamento-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCFD266E1C57032E00E2A6F0 /* Debug */,
+				FCFD266F1C57032E00E2A6F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
