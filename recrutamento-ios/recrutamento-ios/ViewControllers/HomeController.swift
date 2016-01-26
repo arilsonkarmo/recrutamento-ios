@@ -73,19 +73,20 @@ public class HomeController: UICollectionViewController {
         let title = cell.viewWithTag(1) as? UILabel
         let poster = cell.viewWithTag(2) as? UIImageView
         
-        title?.text = self.shows[indexPath.row].title
-        poster?.image = UIImage(named: "movile-loading.png")
-        
-        if let url = self.shows[indexPath.row].imageURL(TraktImageType.Poster , size: TraktImageSize.Thumb) {
-            if let img = ShowsModel().getPosterCache(url) {
-                poster?.image = img
-            } else {
-                ShowsModel().asyncLoadImageContent(url, completion: { (image) -> Void in
-                    let ip =  collectionView.indexPathForCell(cell)
-                    if indexPath.isEqual(ip) {
-                        poster?.image = image
-                    }
-                })
+        if self.shows != nil {
+            title?.text = self.shows[indexPath.row].title
+            poster?.image = UIImage(named: "movile-loading.png")
+            if let url = self.shows[indexPath.row].imageURL(TraktImageType.Poster , size: TraktImageSize.Thumb) {
+                if let img = ShowsModel().getPosterCache(url) {
+                    poster?.image = img
+                } else {
+                    ShowsModel().asyncLoadImageContent(url, completion: { (image) -> Void in
+                        let ip =  collectionView.indexPathForCell(cell)
+                        if indexPath.isEqual(ip) {
+                            poster?.image = image
+                        }
+                    })
+                }
             }
         }
         return cell
