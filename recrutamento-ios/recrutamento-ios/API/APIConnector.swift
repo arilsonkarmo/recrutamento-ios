@@ -35,6 +35,8 @@ class APIConnector {
     func getTrendingShows(increment: Bool, completionBlock: ([ShowsModel]?, NSError?) -> ()) {
         if increment {
             page = page + 1
+        } else {
+            page = 1
         }
         
         let request = createRequestPath("shows/trending")
@@ -55,7 +57,6 @@ class APIConnector {
                 completionBlock(nil, error)
             }
         }
-        
         
     }
     

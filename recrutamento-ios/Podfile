@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'recrutamento-ios' do
 pod 'Alamofire', '~> 3.0'
+pod 'DGElasticPullToRefresh'
 end
 

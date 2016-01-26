@@ -8,6 +8,9 @@
 
 import Foundation
 
+/*
+*  Enum all image types returned from Trakt API.
+*/
 public enum TraktImageType:String {
     case Banner = "banner"
     , ClearArt = "clearart"

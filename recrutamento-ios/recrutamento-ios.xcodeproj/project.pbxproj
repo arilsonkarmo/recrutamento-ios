@@ -22,7 +22,30 @@
 		FCE1CC871C55C9EB002AAC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE1CC861C55C9EB002AAC25 /* Assets.xcassets */; };
 		FCFD26371C564C4B00E2A6F0 /* movilelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD26361C564C4B00E2A6F0 /* movilelogo.png */; };
 		FCFD26391C5650F300E2A6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD26381C5650F300E2A6F0 /* Constants.swift */; };
+		FCFD26421C5692BD00E2A6F0 /* recrutamento_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD26411C5692BD00E2A6F0 /* recrutamento_iosTests.swift */; };
+		FCFD26491C569F8F00E2A6F0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC761C55B70B002AAC25 /* HomeController.swift */; };
+		FCFD264A1C569FC900E2A6F0 /* TraktImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7E1C55B762002AAC25 /* TraktImageSize.swift */; };
+		FCFD264B1C569FCD00E2A6F0 /* TraktImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7F1C55B762002AAC25 /* TraktImageType.swift */; };
+		FCFD264C1C569FD100E2A6F0 /* TraktManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC801C55B762002AAC25 /* TraktManager.swift */; };
+		FCFD264D1C569FDD00E2A6F0 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7A1C55B72F002AAC25 /* APIConnector.swift */; };
+		FCFD264E1C56A00400E2A6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD26381C5650F300E2A6F0 /* Constants.swift */; };
+		FCFD264F1C56A00A00E2A6F0 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC771C55B70B002AAC25 /* OverviewController.swift */; };
+		FCFD26501C56A01600E2A6F0 /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC7C1C55B743002AAC25 /* ShowModel.swift */; };
+		FCFD26511C56A23500E2A6F0 /* GenericAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1CC741C55B6EC002AAC25 /* GenericAlert.swift */; };
+		FCFD265E1C56CF4900E2A6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC863EA01C4F0E4100B95C79 /* Main.storyboard */; };
+		FCFD26601C56F31400E2A6F0 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */; };
+		FCFD26611C56F5D600E2A6F0 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCFD26441C5692BD00E2A6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC863E911C4F0E4000B95C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC863E981C4F0E4000B95C79;
+			remoteInfo = "recrutamento-ios";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A08BF307AA0CE4A7CFA7F73 /* Pods-recrutamento-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recrutamento-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-recrutamento-ios/Pods-recrutamento-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +68,10 @@
 		FCE1CC861C55C9EB002AAC25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFD26361C564C4B00E2A6F0 /* movilelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = movilelogo.png; path = Images/movilelogo.png; sourceTree = "<group>"; };
 		FCFD26381C5650F300E2A6F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FCFD263F1C5692BC00E2A6F0 /* recrutamento-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "recrutamento-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFD26411C5692BD00E2A6F0 /* recrutamento_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recrutamento_iosTests.swift; sourceTree = "<group>"; };
+		FCFD26431C5692BD00E2A6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +80,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F313CBB48FE68181AC56268 /* Pods_recrutamento_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFD263C1C5692BC00E2A6F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FC863E9B1C4F0E4000B95C79 /* recrutamento-ios */,
+				FCFD26401C5692BD00E2A6F0 /* recrutamento-iosTests */,
 				FC863E9A1C4F0E4000B95C79 /* Products */,
 				03A958AF5354EA6A6263A337 /* Pods */,
 				B1C0ACD35F44B337E22C5EEF /* Frameworks */,
@@ -91,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				FC863E991C4F0E4000B95C79 /* recrutamento-ios.app */,
+				FCFD263F1C5692BC00E2A6F0 /* recrutamento-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE1CC741C55B6EC002AAC25 /* GenericAlert.swift */,
+				FCFD265F1C56F31300E2A6F0 /* GenericLoader.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -171,6 +208,15 @@
 				FCFD26381C5650F300E2A6F0 /* Constants.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		FCFD26401C5692BD00E2A6F0 /* recrutamento-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD26411C5692BD00E2A6F0 /* recrutamento_iosTests.swift */,
+				FCFD26431C5692BD00E2A6F0 /* Info.plist */,
+			);
+			path = "recrutamento-iosTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +242,24 @@
 			productReference = FC863E991C4F0E4000B95C79 /* recrutamento-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FCFD263E1C5692BC00E2A6F0 /* recrutamento-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCFD26461C5692BD00E2A6F0 /* Build configuration list for PBXNativeTarget "recrutamento-iosTests" */;
+			buildPhases = (
+				FCFD263B1C5692BC00E2A6F0 /* Sources */,
+				FCFD263C1C5692BC00E2A6F0 /* Frameworks */,
+				FCFD263D1C5692BC00E2A6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCFD26451C5692BD00E2A6F0 /* PBXTargetDependency */,
+			);
+			name = "recrutamento-iosTests";
+			productName = "recrutamento-iosTests";
+			productReference = FCFD263F1C5692BC00E2A6F0 /* recrutamento-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +272,10 @@
 				TargetAttributes = {
 					FC863E981C4F0E4000B95C79 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					FCFD263E1C5692BC00E2A6F0 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FC863E981C4F0E4000B95C79;
 					};
 				};
 			};
@@ -225,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				FC863E981C4F0E4000B95C79 /* recrutamento-ios */,
+				FCFD263E1C5692BC00E2A6F0 /* recrutamento-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +307,14 @@
 				FCE1CC871C55C9EB002AAC25 /* Assets.xcassets in Resources */,
 				FCFD26371C564C4B00E2A6F0 /* movilelogo.png in Resources */,
 				FC863EA21C4F0E4100B95C79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFD263D1C5692BC00E2A6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD265E1C56CF4900E2A6F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +379,7 @@
 				FCE1CC781C55B70B002AAC25 /* HomeController.swift in Sources */,
 				FCE1CC7D1C55B743002AAC25 /* ShowModel.swift in Sources */,
 				FCFD26391C5650F300E2A6F0 /* Constants.swift in Sources */,
+				FCFD26601C56F31400E2A6F0 /* GenericLoader.swift in Sources */,
 				FCE1CC791C55B70B002AAC25 /* OverviewController.swift in Sources */,
 				FCE1CC811C55B762002AAC25 /* TraktImageSize.swift in Sources */,
 				FC863E9D1C4F0E4000B95C79 /* AppDelegate.swift in Sources */,
@@ -309,7 +387,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCFD263B1C5692BC00E2A6F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD26511C56A23500E2A6F0 /* GenericAlert.swift in Sources */,
+				FCFD264D1C569FDD00E2A6F0 /* APIConnector.swift in Sources */,
+				FCFD26491C569F8F00E2A6F0 /* HomeController.swift in Sources */,
+				FCFD26421C5692BD00E2A6F0 /* recrutamento_iosTests.swift in Sources */,
+				FCFD264B1C569FCD00E2A6F0 /* TraktImageType.swift in Sources */,
+				FCFD264E1C56A00400E2A6F0 /* Constants.swift in Sources */,
+				FCFD26611C56F5D600E2A6F0 /* GenericLoader.swift in Sources */,
+				FCFD264C1C569FD100E2A6F0 /* TraktManager.swift in Sources */,
+				FCFD26501C56A01600E2A6F0 /* ShowModel.swift in Sources */,
+				FCFD264F1C56A00A00E2A6F0 /* OverviewController.swift in Sources */,
+				FCFD264A1C569FC900E2A6F0 /* TraktImageSize.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCFD26451C5692BD00E2A6F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC863E981C4F0E4000B95C79 /* recrutamento-ios */;
+			targetProxy = FCFD26441C5692BD00E2A6F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FC863EA01C4F0E4100B95C79 /* Main.storyboard */ = {
@@ -440,6 +544,30 @@
 			};
 			name = Release;
 		};
+		FCFD26471C5692BD00E2A6F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "recrutamento-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arilsoncarmo.recrutamento-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recrutamento-ios.app/recrutamento-ios";
+			};
+			name = Debug;
+		};
+		FCFD26481C5692BD00E2A6F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "recrutamento-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arilsoncarmo.recrutamento-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recrutamento-ios.app/recrutamento-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +585,15 @@
 			buildConfigurations = (
 				FC863EAC1C4F0E4100B95C79 /* Debug */,
 				FC863EAD1C4F0E4100B95C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCFD26461C5692BD00E2A6F0 /* Build configuration list for PBXNativeTarget "recrutamento-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCFD26471C5692BD00E2A6F0 /* Debug */,
+				FCFD26481C5692BD00E2A6F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

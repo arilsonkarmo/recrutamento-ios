@@ -7,73 +7,72 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
-private let downloadQueue = dispatch_queue_create("com.arilsoncarmo.movile-test", nil)
 
-class HomeController: UICollectionViewController {
+public class HomeController: UICollectionViewController {
     
     let reuseIdentifier = "movieCell"
     let sectionInsets = UIEdgeInsets(top: 20.0, left: 15.0, bottom: 15.0, right: 10.0)
-    var trakt = TraktManager()
+    let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+    let loader = GenericLoader()
     var shows: [ShowsModel]!
     var posterCache = NSCache()
     var loadingFrame = UIView()
     var activityIndicator = UIActivityIndicatorView()
     
-    override func viewDidLoad() {
-        loadShows(true)
+    
+    override public func viewDidLoad() {
+        loader.showSpinner(view)
+        self.loadShows(true)
+        self.loadingPullRefresh()
     }
     
     /*
     *  Load trending shows from Trakt API
-    *  parameter: An boolean to increment page or not.
+    *  parameter: An boolean to increment page or not and dependency
+    *  injecting to be turn an testable method.
     */
-    func loadShows(increment: Bool) {
-        self.showLoaderSpinner(true)
-        trakt.getTrendingShows (increment) { (result, error) -> Void in
+    func loadShows(increment: Bool, trakt: TraktManager = TraktManager()) {
+        trakt.getTrendingShows(increment) { (result, error) -> Void in
             if let listShows = result {
-            if self.shows != nil {
-                self.shows.appendContentsOf(listShows)
-            } else{
-                self.shows = listShows
-            }
-                
+                if self.shows != nil && increment == true {
+                    self.shows.appendContentsOf(listShows)
+                } else{
+                    self.shows = listShows
+                }
                 self.collectionView?.reloadData()
-                self.showLoaderSpinner(false)
+                self.loader.hideSpinner()
             } else if let _ = error {
-                self.showLoaderSpinner(false)
-                GenericAlert().showAlert("Error", stringMessage: "Error on get Trakt Show List. We will try to get the show list again OK?",
+                self.loader.hideSpinner()
+                GenericAlert().showAlert("Error", stringMessage: "Error on get the trending tv show list from the Trakt server. We will try to get again OK?",
                     completion: { () -> Void in
+                    self.loader.showSpinner(self.view)
                     self.loadShows(false)
                 })
             }
         }
     }
     
-    /* 
-     *  Show load spiner on center of the view.
-     *  parameter: boolean show spinner (true), remove spinner(false)
+    /*
+    * Loading pullRefresh lib in collectionView.
     */
-    func showLoaderSpinner(show:Bool) {
-        if show {
-            loadingFrame = UIView(frame: CGRect(x: view.frame.midX - 40, y: view.frame.midY - 40 , width: 80, height: 80))
-            loadingFrame.layer.cornerRadius = 15
-            loadingFrame.backgroundColor = UIColor(white: 0, alpha: 0.8)
-            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
-            activityIndicator.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-            activityIndicator.startAnimating()
-            loadingFrame.addSubview(activityIndicator)
-            view.addSubview(loadingFrame)
-        } else {
-            loadingFrame.removeFromSuperview()
-        }
+    func loadingPullRefresh() {
+        loadingView.tintColor = UIColor(white:1, alpha: 1)
+        collectionView!.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.shows = nil
+            self?.loadShows(false)
+            self?.collectionView!.dg_stopLoading()
+            }, loadingView: loadingView)
+        collectionView!.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        collectionView!.dg_setPullToRefreshBackgroundColor(collectionView!.backgroundColor!)
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.shows?.count ?? 0
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
         let title = cell.viewWithTag(1) as? UILabel
         let poster = cell.viewWithTag(2) as? UIImageView
@@ -82,11 +81,10 @@ class HomeController: UICollectionViewController {
         poster?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         
         if let url = self.shows[indexPath.row].imageURL(TraktImageType.Poster , size: TraktImageSize.Thumb) {
-            let img = posterCache.objectForKey(url) as? UIImage
+            let img = ShowsModel().getPosterCache(url)
             poster?.image = img
-            
             if img == nil {
-                asyncLoadImageContent(url, completion: { (image) -> Void in
+                ShowsModel().asyncLoadImageContent(url, completion: { (image) -> Void in
                     let ip =  collectionView.indexPathForCell(cell)
                     if indexPath.isEqual(ip) {
                         poster?.image = image
@@ -97,23 +95,7 @@ class HomeController: UICollectionViewController {
         return cell
     }
     
-    /*
-    *  Async method to load image..
-    *  parameters: an url from image and callback to completion
-    */
-    func asyncLoadImageContent(imageURL: NSURL, completion: (image: UIImage) -> Void) {
-        dispatch_async(downloadQueue) { () -> Void in
-            if let data = NSData(contentsOfURL: imageURL) {
-                let image = UIImage(data: data)
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.posterCache.setObject(image!, forKey: imageURL)
-                    completion(image: image!)
-                }
-            }
-        }
-    }
-        
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destination = segue.destinationViewController as? OverviewController {
             if let indexPath = collectionView?.indexPathsForSelectedItems() {
                 destination.titleShow = self.shows[indexPath[0].row].title
@@ -128,24 +110,28 @@ class HomeController: UICollectionViewController {
     *  Async method to load image..
     *  parameters: an url from image and callback to completion
     */
-    override func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    override public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if shows != nil && shows.count > 0 {
             let offsetY = scrollView.contentOffset.y;
             let contentHeight = scrollView.contentSize.height;
             if (offsetY > contentHeight - (scrollView.frame.size.height - 85))
             {
-                loadShows(true)
+                loader.showSpinner(view)
+                self.loadShows(true)
             }
         }
     }
-}
-
-extension HomeController : UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView,
+    
+    /*
+    * Set default Edge insets on the collection view cells
+    */
+    public func collectionView(collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             return sectionInsets
     }
+
 }
+
 
 

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.15, green: 0.02, blue: 0.25, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor(white: 1.0, alpha: 1)
         return true
     }
 
